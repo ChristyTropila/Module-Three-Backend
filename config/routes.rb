@@ -7,5 +7,7 @@ Rails.application.routes.draw do
 
   get '/items/:id', to: 'items#show'
   get '/items', to: 'items#index'
+
+  get '/assets/:url', to: 'items#images'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

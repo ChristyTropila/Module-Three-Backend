@@ -6,14 +6,11 @@ class CollectionBoardsController < ApplicationController
     end
 
     def show
-        @board=CollectionBoard.find_by(id: params[:id])
-        render json: @board
+        @board=CollectionBoard.find(params[:id])
+        render json: @board.id
     end
 
-    def new
-        @board=CollectionBoard.new
-    end
-    
+
     def create
         @board=CollectionBoard.create(collection_params)
         if @board.save
@@ -22,9 +19,6 @@ class CollectionBoardsController < ApplicationController
             flash[:errors]=@board.errors.full_messages
     end
 
-    def edit
-        @current_board=CollectionBoard.find_by(id: params[:id])
-    end
 
     def update
         @current_board=CollectionBoard.find_by(id: params[:id])

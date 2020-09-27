@@ -6,21 +6,21 @@ class UsersController < ApplicationController
     end
 
     def show
-        @user=User.find_by(id: session[:id])
+        @user=User.find(params[:id])
+        render json: @user
     end
 
-    def new
-       @user=User.new
-    end
+
 
     def create
         @user=User.create(user_params)
-        if @user.save
+        if @user.valid?
             session[:user_id]=@user.id
          render json: @user
         else
-            flash[:erros]=@user.errors.full_messages
+            render json: {errors: @user.errors.full_messages}
     end
+end
 
 
 

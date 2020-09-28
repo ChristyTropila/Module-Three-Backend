@@ -12,12 +12,11 @@ class CollectionBoardsController < ApplicationController
 
 
     def create
-     byebug
+        
         @board=CollectionBoard.create(collection_params)
         @items=Item.find(params[:item_id])
         @items.collection_board_id=@board.id
         @board.items << @items
-        byebug
          render json: @board
         
         

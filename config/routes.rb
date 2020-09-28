@@ -10,7 +10,8 @@ Rails.application.routes.draw do
 
   post '/collection_boards', to: 'collection_boards#create'
   get '/collection_boards', to: 'collection_boards#index'
-  get '/collection_boards/:id', to: 'collection_board#show'
+  get '/collection_boards/:id', to: 'collection_boards#show'
+  delete '/collection_boards/:id', to: 'collection_boards#destroy'
 
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html

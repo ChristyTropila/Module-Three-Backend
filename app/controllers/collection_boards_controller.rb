@@ -7,32 +7,36 @@ class CollectionBoardsController < ApplicationController
 
     def show
         @board=CollectionBoard.find(params[:id])
-        render json: @board.id
+        render json: @board
     end
 
 
     def create
-        
-        @board=CollectionBoard.create(collection_params)
         @items=Item.find(params[:item_id])
+        @board=CollectionBoard.create(collection_params)
+      
         @items.collection_board_id=@board.id
         @board.items << @items
          render json: @board
-        
-        
+       
 end
 
 
     def update
-        @current_board=CollectionBoard.find_by(id: params[:id])
+        
+        @current_board=CollectionBoard.find(params[:id])
         @current_board.update(collection_params)
         render json: @current_board
     end
 
-    def delete
-        @current_board=CollectionBoard.find_by(id: params[:id])
+    def destroy
+      @current_board=CollectionBoard.find(params[:id])
+     items=@current_board.items
+     @current_board.items.delete(items)
         @current_board.destroy
     end
+
+
 
 
     private

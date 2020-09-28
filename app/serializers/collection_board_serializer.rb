@@ -1,4 +1,5 @@
 class CollectionBoardSerializer < ActiveModel::Serializer
-  attributes :id, :name, :created_at
+  attributes :id, :name
   has_one :user_id
+  has_many :items
 end

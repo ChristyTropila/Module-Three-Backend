@@ -12,12 +12,16 @@ class CollectionBoardsController < ApplicationController
 
 
     def create
+     byebug
         @board=CollectionBoard.create(collection_params)
-        if @board.save
+        @items=Item.find(params[:item_id])
+        @items.collection_board_id=@board.id
+        @board.items << @items
+        byebug
          render json: @board
-        else
-            flash[:errors]=@board.errors.full_messages
-    end
+        
+        
+end
 
 
     def update
@@ -34,6 +38,6 @@ class CollectionBoardsController < ApplicationController
 
     private
     def collection_params
-       params.permit(:name) 
+       params.permit(:name, :id, :user_id, :items) 
     end
 end

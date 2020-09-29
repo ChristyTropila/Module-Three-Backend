@@ -10,6 +10,22 @@ class UsersController < ApplicationController
         render json: @user
     end
 
+    def login
+        @error=flash[:error]
+    end
+
+    def handle_login
+        @user=User.find(username: params[:username])
+       if @user
+         render json: @user
+       else
+        render json: {errors: @user.errors.full_messages}
+       end
+    end
+
+    def logout
+        session[:user_id]=nil
+    end
 
 
     def create

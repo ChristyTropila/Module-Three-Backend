@@ -38,8 +38,6 @@ end
     end
 
 
-
-
     private
     def collection_params
        params.permit(:name, :id, :user_id, :items) 

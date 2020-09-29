@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/collection_boards/:id', to: 'collection_boards#show'
   delete '/collection_boards/:id', to: 'collection_boards#destroy'
 
+  patch 'collection_boards/:id', to: 'collection_boards#update'
+
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

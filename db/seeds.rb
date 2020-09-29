@@ -26,7 +26,6 @@ activity=Category.create!(name: "Halloween Fun")
 craft=Category.create!(name: "Autumn Crafts")
 costume=Category.create!(name: "Halloween Inspo")
 
-temp=CollectionBoard.create!(name: "temporary collection", user_id: christy.id )
 
 
 # t.string "name"

@@ -22,21 +22,14 @@ end
 
 
     def update
-      byebug
         @current_board=CollectionBoard.find(params[:id])
         items=@current_board.items
         @current_board.items << items
         @current_board.update(name: params[:name])
-       byebug
         render json: @current_board
     end
      
-    def findItems(id)
-        Item.all.find |item|
-        item.collection_board_id===id.to_i
-    end
-
-
+ 
     def destroy
       @current_board=CollectionBoard.find(params[:id])
      items=@current_board.items

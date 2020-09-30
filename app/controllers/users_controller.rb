@@ -15,12 +15,14 @@ class UsersController < ApplicationController
     end
 
     def handle_login
-        @user=User.find(username: params[:username])
+        byebug
+        @user=User.find_by(username: params[:username])
        if @user
          render json: @user
        else
         render json: {errors: @user.errors.full_messages}
        end
+       byebug
     end
 
     def logout

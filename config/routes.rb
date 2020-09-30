@@ -15,6 +15,7 @@ Rails.application.routes.draw do
 
   patch 'collection_boards/:id', to: 'collection_boards#update'
 
+  get '/users/:id', to: 'users#show'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

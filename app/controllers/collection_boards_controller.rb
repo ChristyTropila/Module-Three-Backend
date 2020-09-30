@@ -12,13 +12,17 @@ class CollectionBoardsController < ApplicationController
 
 
     def create
-        @items=Item.find(params[:item_id])
-        @board=CollectionBoard.create(collection_params)
+     @items=Item.find(params[:item_id])
+     @board=CollectionBoard.create(collection_params)
         @items.collection_board_id=@board.id
         @board.items << @items
+     if @board.valid?
          render json: @board
-       
-end
+        else
+            render json: {errors: @board.errors.full_messages}
+        end
+    end
+
 
 
     def update

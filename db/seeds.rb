@@ -18,9 +18,6 @@ Category.reset_pk_sequence
 
 
 
-
-christy=User.create!(name: "Christy", username: "trops3")
-
 recipe=Category.create!(name: "Autumn Recipes")
 activity=Category.create!(name: "Halloween Fun")
 craft=Category.create!(name: "Autumn Crafts")

@@ -50,3 +50,6 @@ https://github.com/ChristyTropila/Project-Three-Frontend
 * Google Fonts
 * rack-cors
 * active_model_serializers
+
+
+https://www.youtube.com/watch?v=7n6ZczMmwVo&t=110s&ab_channel=ChristyTropila

@@ -11,23 +11,42 @@ This project integrates everything I learned in module 3 including the ability t
  * Integrate JavaScript and Rails
 
 
+Sweaterweather was inspirired by the application Pinterest. This app focuses on the Autumn season and allows users to store different items that they are interested in into a collection board that they create and name as they desire. 
 
-Things you may want to cover:
+# User Stories
 
-* Ruby version
+* User can login or create new registration
+* User can browse items from 4 different categories using the navigation bar
+* User can pin item and create a new collection board
+* User can add as many items to one collection board as they want or create a new collection board
+* User can rename collection board
+* User can delete collection board
 
-* System dependencies
+# How to play
+# You must clone the frontend to this project as well!!
+https://github.com/ChristyTropila/Project-Three-Frontend
 
-* Configuration
+1) Clone both repos to your local computer
+2) CD into backend repo and and open up a text editor of your choice
+3) In terminal run the following commands
+4) bundle install  -install gems
+5) rails db:migrate -add migrations to data tables
+6) rails db:seed -seed the program with seeded data
+7) rails s -p 5000 start up the server
+8) open up the frontend repo and open up the index.html file in your browser
+9) Read the introduction, create a new user, and enjoy the process!
 
-* Database creation
 
-* Database initialization
 
-* How to run the test suite
+# Stack and Gems used
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Visual Studio Code
+* PostgresSQL
+* Rails as an API
+* JavaScript
+* HTML/CSS
+* ActiveRecord
+* Cloudinary(photo upload)
+* Google Fonts
+* rack-cors
+* active_model_serializers

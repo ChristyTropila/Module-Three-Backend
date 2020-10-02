@@ -51,5 +51,6 @@ https://github.com/ChristyTropila/Project-Three-Frontend
 * rack-cors
 * active_model_serializers
 
+# Video demonstration below
 
 https://www.youtube.com/watch?v=7n6ZczMmwVo&t=110s&ab_channel=ChristyTropila
